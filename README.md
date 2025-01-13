@@ -82,6 +82,7 @@ Usage
 
 
 =========API Endpoints========
+
 Users
 
 -Create a User: POST /user
