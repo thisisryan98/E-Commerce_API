@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "b3904f8c-7d3e-4c0a-a836-8e9b48b73be7",
+		"name": "API E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40912806"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Harry Potter\",\n  \"address\": \"4 Privet Drive, Little Whinging, Surrey\",\n  \"email\": \"harry@hogwarts.edu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Multiple Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"name\": \"Hermione Granger\",\n    \"address\": \"Brighton 23, London\",\n    \"email\": \"hermione@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Ron Weasley\",\n    \"address\": \"The Burrow, Ottery St. Catchpole, Devon\",\n    \"email\": \"ron@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Ginny Weasley\",\n    \"address\": \"The Burrow, Ottery St. Catchpole, Devon\",\n    \"email\": \"ginny@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Fred Weasley\",\n    \"address\": \"The Burrow, Ottery St. Catchpole, Devon\",\n    \"email\": \"fred@hogwarts.edu\"\n  },\n  {\n    \"name\": \"George Weasley\",\n    \"address\": \"The Burrow, Ottery St. Catchpole, Devon\",\n    \"email\": \"george@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Luna Lovegood\",\n    \"address\": \"The Rookery, Ottery St. Catchpole, Devon\",\n    \"email\": \"luna@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Neville Longbottom\",\n    \"address\": \"Longbottom Manor, Yorkshire\",\n    \"email\": \"neville@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Draco Malfoy\",\n    \"address\": \"Malfoy Manor, Wiltshire\",\n    \"email\": \"draco@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Albus Dumbledore\",\n    \"address\": \"Headmaster's Office, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"albus@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Minerva McGonagall\",\n    \"address\": \"Faculty Wing, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"minerva@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Rubeus Hagrid\",\n    \"address\": \"Hut on the Grounds, Hogwarts, Highlands, Scotland\",\n    \"email\": \"hagrid@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Severus Snape\",\n    \"address\": \"Dungeons, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"snape@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Remus Lupin\",\n    \"address\": \"Teacher's Quarters, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"remus@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Sirius Black\",\n    \"address\": \"12 Grimmauld Place, London\",\n    \"email\": \"sirius@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Peter Pettigrew\",\n    \"address\": \"Rat's Alley, Unknown\",\n    \"email\": \"peter@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Bellatrix Lestrange\",\n    \"address\": \"Lestrange Estate, Unknown\",\n    \"email\": \"bellatrix@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Narcissa Malfoy\",\n    \"address\": \"Malfoy Manor, Wiltshire\",\n    \"email\": \"narcissa@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Lucius Malfoy\",\n    \"address\": \"Malfoy Manor, Wiltshire\",\n    \"email\": \"lucius@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Gilderoy Lockhart\",\n    \"address\": \"Ward 49, St Mungo's Hospital, London\",\n    \"email\": \"lockhart@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Dolores Umbridge\",\n    \"address\": \"Frog Ornament Room, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"umbridge@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Filius Flitwick\",\n    \"address\": \"Charms Office, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"flitwick@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Pomona Sprout\",\n    \"address\": \"Greenhouse 3, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"sprout@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Sybill Trelawney\",\n    \"address\": \"North Tower, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"trelawney@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Poppy Pomfrey\",\n    \"address\": \"Hospital Wing, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"pomfrey@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Argus Filch\",\n    \"address\": \"Caretaker's Office, Hogwarts Castle, Highlands, Scotland\",\n    \"email\": \"filch@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Percy Weasley\",\n    \"address\": \"Ministry of Magic, London\",\n    \"email\": \"percy@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Bill Weasley\",\n    \"address\": \"Shell Cottage, Tinworth, Cornwall\",\n    \"email\": \"bill@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Charlie Weasley\",\n    \"address\": \"Romania Dragon Preserve\",\n    \"email\": \"charlie@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Molly Weasley\",\n    \"address\": \"The Burrow, Ottery St. Catchpole, Devon\",\n    \"email\": \"molly@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Arthur Weasley\",\n    \"address\": \"The Burrow, Ottery St. Catchpole, Devon\",\n    \"email\": \"arthur@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Cedric Diggory\",\n    \"address\": \"Hufflepuff Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"cedric@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Fleur Delacour\",\n    \"address\": \"Shell Cottage, Tinworth, Cornwall\",\n    \"email\": \"fleur@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Viktor Krum\",\n    \"address\": \"Durmstrang Institute, Northern Europe\",\n    \"email\": \"viktor@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Nymphadora Tonks\",\n    \"address\": \"Auror Headquarters, Ministry of Magic, London\",\n    \"email\": \"tonks@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Andromeda Tonks\",\n    \"address\": \"Tonks Residence, London Suburbs\",\n    \"email\": \"andromeda@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Ted Tonks\",\n    \"address\": \"Tonks Residence, London Suburbs\",\n    \"email\": \"ted@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Dean Thomas\",\n    \"address\": \"Leaky Cauldron, Diagon Alley, London\",\n    \"email\": \"dean@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Seamus Finnigan\",\n    \"address\": \"Gryffindor Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"seamus@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Cho Chang\",\n    \"address\": \"Ravenclaw Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"cho@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Parvati Patil\",\n    \"address\": \"Gryffindor Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"parvati@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Padma Patil\",\n    \"address\": \"Ravenclaw Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"padma@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Oliver Wood\",\n    \"address\": \"Quidditch Pitch, Hogwarts, Highlands, Scotland\",\n    \"email\": \"oliver@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Angelina Johnson\",\n    \"address\": \"Quidditch Pitch, Hogwarts, Highlands, Scotland\",\n    \"email\": \"angelina@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Katie Bell\",\n    \"address\": \"Gryffindor Tower, Hogwarts, Highlands, Scotland\",\n    \"email\": \"katie@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Lee Jordan\",\n    \"address\": \"Gryffindor Tower, Hogwarts, Highlands, Scotland\",\n    \"email\": \"lee@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Alicia Spinnet\",\n    \"address\": \"Gryffindor Tower, Hogwarts, Highlands, Scotland\",\n    \"email\": \"alicia@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Colin Creevey\",\n    \"address\": \"Gryffindor Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"colin@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Dennis Creevey\",\n    \"address\": \"Gryffindor Dorm, Hogwarts, Highlands, Scotland\",\n    \"email\": \"dennis@hogwarts.edu\"\n  },\n  {\n    \"name\": \"Xenophilius Lovegood\",\n    \"address\": \"Lovegood House, Ottery St. Catchpole, Devon\",\n    \"email\": \"xenophilius@hogwarts.edu\"\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all users (paginated)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users?page=1&per_page=50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve specific user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/<int:user_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"<int:user_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"harryjpotter@hogwarts.edu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/<int:user_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"<int:user_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/<int:user_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"<int:user_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"product_name\": \"Remembrall\",\n  \"price\": 14.49\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all products (paginated)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/products?page=1&per_page=50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/products/<int:product_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"<int:product_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"price\": 599.98\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/products/<int:product_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"<int:product_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/products/<int:product_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"products",
+						"<int:product_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 5,\n  \"order_date\": \"2025-01-05T20:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all orders (paginated)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/all_orders?page=1&per_page=30",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"all_orders"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve all orders for one user(paginated)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/order/user/<int:user_id>?page=1&per_page=30",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"user",
+						"<int:user_id>"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an order's shipping status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"shipping_status\": \"Canceled\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders/<int:order_id>/shipping_status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"<int:order_id>",
+						"shipping_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add one product to order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders/<int:order_id>/add_product/<int:product_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"<int:order_id>",
+						"add_product",
+						"<int:product_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add multiple products to an order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"product_ids\": [5, 6, 7]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/order/<int:order_id>/add_products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"<int:order_id>",
+						"add_products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all products in an order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/order/<int:order_id>/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"<int:order_id>",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all products a user has ordered",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/order/user/<int:user_id>/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"user",
+						"<int:user_id>",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove a product from an order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders/<int:order_id>/remove_product/<int:product_id>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"<int:order_id>",
+						"remove_product",
+						"<int:product_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate invoice for an order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/orders/<int:order_id>/invoice",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"orders",
+						"<int:order_id>",
+						"invoice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
